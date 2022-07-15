@@ -1,0 +1,79 @@
+.tour {
+   width: 40vw;
+   padding: 30px;
+   border-radius: 5px;
+   margin-top: 20px;
+   background-color: #fff;
+   box-sizing: border-box;
+   overflow: hidden;
+   transition: all 300ms linear;
+   &:last-child {
+      margin-bottom: 20px;
+   }
+   &__image {
+      width: calc(100% + 60px);
+      padding-top: calc((9 / 16) * (100% + 60px));
+      margin-left: -30px;
+      margin-top: -30px;
+      margin-bottom: 30px;
+      background-size: cover;
+   }
+   &__info {
+      position: relative;
+      &-price {
+         position: absolute;
+         top: 0;
+         right: 0;
+         display: block;
+         font-weight: bold;
+         color: #62b2ec;
+         background-color: rgb(98, 178, 236, 0.2);
+         padding: 3px 7px;
+         border-radius: 5px;
+      }
+      &-title {
+         font-family: 'Segoe UI', sans-serif;
+         font-size: 17px;
+         letter-spacing: 2px;
+         margin-bottom: 20px;
+         color: #33334f;
+      }
+      &-desc {
+         color: #889db1;
+      }
+   }
+}
+.toggle-show-btn {
+   color: #62b2ec;
+   cursor: pointer;
+}
+.not-interested-btn {
+   padding: 10px 50px;
+   border: none;
+   border-radius: 5px;
+   margin-left: 50%;
+   margin-top: 25px;
+   margin-bottom: 15px;
+   transform: translateX(-50%);
+   cursor: pointer;
+   color: #fff;
+   font-size: 16px;
+   letter-spacing: 1px;
+   background-color: rgb(98, 178, 236);
+   box-shadow: 0 20px 8px -17px rgb(98, 178, 236);
+   transition: all 0.25s linear;
+}
+.pressed-btn {
+   transform: translateX(-50%) scale(1.1, 1);
+   box-shadow: none;
+}
+.pull-right {
+   animation: pull-right 300ms linear;
+   // animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes pull-right {
+   100% {
+      transform: translateX(100vw);
+   }
+}
